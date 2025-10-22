@@ -1,0 +1,20 @@
+# 1. Разворот списка
+lst = [1, 2, 3, 4, 5]
+lst.reverse()
+print("Обратный порядок:", lst)
+
+# 2. Сортировка по убыванию абсолютного значения
+def list_sort(lst):
+    return sorted(lst, key=abs, reverse=True)
+
+numbers = [-10, 2, -3, 7, -20, 5]
+print("Сортировка по убыванию abs:", list_sort(numbers))
+
+# 3. Замена местами первого и последнего элемента
+def change(lst):
+    if len(lst) >= 2:
+        lst[0], lst[-1] = lst[-1], lst[0]
+    return lst
+
+example = [10, 20, 30, 40]
+print("После замены:", change(example))
